@@ -19,16 +19,16 @@ gridColumns = [
 ];
 
 linkData = [
-    {id: "1", title: "01. Nobody Can Save Me", duration:"3:45"},
-    {id: "2", title: "02. Good Goodbye", duration:"3:31"},
-    {id: "3", title: "03. Talking to Myself", duration:"3:51"},
-    {id: "4", title: "04. Battle Symphony", duration:"3:36"},
-    {id: "5", title: "05. Invisible", duration:"3:34"},
-    {id: "6", title: "06. Heavy [Explicit]", duration:"2:49"},
-    {id: "7", title: "07. Sorry for Now", duration:"3:23"},
-    {id: "8", title: "08. Halfway Right", duration:"3:37"},
-    {id: "9", title: "09. One More Light", duration:"4:15"},
-    {id: "10", title: "10. Sharp Edges", duration:"2:58"},
+    {id: "NobodyCanSaveMe", title: "01. Nobody Can Save Me", duration:"3:45"},
+    {id: "GoodGoodbye", title: "02. Good Goodbye", duration:"3:31"},
+    {id: "TalkingtoMyself", title: "03. Talking to Myself", duration:"3:51"},
+    {id: "BattleSymphony", title: "04. Battle Symphony", duration:"3:36"},
+    {id: "Invisible", title: "05. Invisible", duration:"3:34"},
+    {id: "Heavy", title: "06. Heavy [Explicit]", duration:"2:49"},
+    {id: "SorryforNow", title: "07. Sorry for Now", duration:"3:23"},
+    {id: "HalfwayRight", title: "08. Halfway Right", duration:"3:37"},
+    {id: "OneMoreLight", title: "09. One More Light", duration:"4:15"},
+    {id: "SharpEdges", title: "10. Sharp Edges", duration:"2:58"},
 ];
 
 devilData = [

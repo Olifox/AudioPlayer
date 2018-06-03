@@ -10,6 +10,10 @@
 	<script type="text/javascript">
 	var selected = linkData;
 	var coverPath = "imgs/linkData.jpg";
+	var perfomer = "Linkin Park";
+	var selectedAudio = "NobodyCanSaveMe";
+	var currentAudio;
+	var audio;
 
 	webix.ui({
 		rows: [
@@ -23,16 +27,15 @@
 							
 								$$("myList").clearAll();
 								$$("myList").parse(window[selected]); 
-								
 								coverPath = "imgs/" + selected + ".jpg"
+								perfomer = $$("myTree").getSelectedValue();
 								$$("myCover").data.src = coverPath;
 								$$("myCover").refresh()
 							}
 						}
 						}
 					},
-					{view:"resizer"},
-					{width: 250, height: 250, id:"myCover", data: {src:coverPath},
+					{width: 268, height: 268, id:"myCover", data: {src:coverPath},
   					template: function (obj) {
     					return '<img src="'+obj.src+'"/>'
   					}
@@ -40,17 +43,57 @@
 				]},
 				{view:"resizer"},
 				{rows: [
-					{view:"datatable", id:"myList", autoConfig:true, data:selected},
+					{view:"datatable", id:"myList", autoConfig:true, data:selected, on: {
+						onSelectChange: function() {
+							selectedAudio = $$("myList").getSelectedId();							
+						}
+					}},
 					{cols: [
 						{ gravity: 3 },
-						{view:"button", value:"< Previous"},
-						{view:"button", value:"Play / Pause"},
-						{view:"button", value:"Next >"}]}
+						{view:"button", value:"< Previous", click: Previous},
+						{view:"button", value:"Play / Pause", click: PlayPauseMusic},
+						{view:"button", value:"Next >", click: Next}]}
 				]}				
 			 ]
 			}
 		]
 	});
+	
+	function PlayPauseMusic(){
+		if (audio != undefined){
+			if(currentAudio == selectedAudio){
+				if (audio.paused)
+					audio.play();
+				else
+					audio.pause();
+			}
+			else{
+				audio.pause();
+				SetCurrentAudio();
+			}
+		}
+		else{
+			SetCurrentAudio();
+		}
+	}	
+	
+	function SetCurrentAudio() {
+		audio = new Audio("audio/" + perfomer + "/" + selectedAudio + ".flac");
+		currentAudio = selectedAudio;
+		audio.play();
+	}
+	
+	function Previous() {
+		$$("myList").moveSelection("up");
+		selectedAudio = $$("myList").getSelectedId();
+		PlayPauseMusic();
+	}
+	
+	function Next() {
+		$$("myList").moveSelection("down");
+		selectedAudio = $$("myList").getSelectedId();
+		PlayPauseMusic();
+	}
 	</script>
 </body>
 </html>
