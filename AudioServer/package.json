@@ -1,0 +1,15 @@
+{
+  "name": "audio-server",
+  "version": "0.0.0",
+  "description": "AudioServer",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": {
+    "name": "Admin"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
