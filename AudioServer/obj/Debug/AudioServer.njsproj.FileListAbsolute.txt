@@ -1,0 +1,3 @@
+C:\Users\Admin\Desktop\field\AudioPlayer\AudioServer\obj\Debug\AudioServer.njsprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\field\AudioPlayer\AudioServer\obj\Debug\AudioServer.njsproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\field\AudioPlayer\AudioServer\bin\Microsoft.NodejsTools.WebRole.dll

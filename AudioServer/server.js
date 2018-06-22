@@ -1,8 +1,10 @@
-const express = require('express');
-const app = express();
-const routing = require('./routing');
-const port = process.env.PORT || 3000;
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var routing = require('./routing');
+var port = process.env.PORT || 3000;
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', routing);
 
 app.listen(port, () => {
